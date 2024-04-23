@@ -5,7 +5,7 @@ import "./App.css";
 import EWallet from "./pages/EWallet";
 import AddCard from "./pages/AddCard";
 
-// To-Do
+// För att det ska funka behöver ni köra
 // npm install react-router-dom
 
 function App() {

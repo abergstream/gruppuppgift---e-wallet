@@ -2,8 +2,8 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import EWallet from "./components/EWallet";
-import AddCard from "./components/AddCard";
+import EWallet from "./pages/EWallet";
+import AddCard from "./pages/AddCard";
 
 // To-Do
 // npm install react-router-dom

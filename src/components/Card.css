@@ -1,5 +1,5 @@
 .card {
-  width: 370px;
+  width: min(370px, 100%);
   height: 235px;
   padding: 20px;
   border-radius: 8px;
@@ -11,7 +11,7 @@
   font-family: "PT Mono", monospace;
   font-size: 28px;
   font-weight: 400;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   color: #fff;
 }
 .card--bitcoin {
@@ -57,7 +57,7 @@
   margin: 0;
 }
 .card__card-number {
-  font-size: 26px;
+  font-size: 24px;
   margin: 5px 0 10px;
   text-align: center;
   width: 100%;

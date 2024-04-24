@@ -6,7 +6,7 @@ const EWallet = () => {
   return (
     <>
       <Top title={"e-wallet"} />
-      <Card newCard={true} />
+      <Card />
     </>
   );
 };

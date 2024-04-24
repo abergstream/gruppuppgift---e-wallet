@@ -1,7 +1,7 @@
 import React from "react";
-
-const Top = () => {
-  return <div></div>;
+import "./Top.css";
+const Top = ({ title }) => {
+  return <h1 className="heading">{title.toUpperCase()}</h1>;
 };
 
 export default Top;

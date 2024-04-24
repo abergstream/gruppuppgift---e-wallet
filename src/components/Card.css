@@ -3,7 +3,6 @@
   height: 235px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #ffb749;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -12,6 +11,23 @@
   font-size: 28px;
   font-weight: 400;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.card--bitcoin {
+  background-color: var(--card-bitcoin);
+  color: #000;
+}
+.card--ninja {
+  background-color: var(--card-ninja);
+}
+.card--evil {
+  background-color: var(--card-evil);
+}
+.card--chain {
+  background-color: var(--card-chain);
+}
+.card--new {
+  background-color: var(--card-new);
 }
 .card__space-between {
   display: flex;

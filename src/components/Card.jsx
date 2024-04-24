@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = () => {
+const Card = ({ newCard }) => {
   const cards = [
     {
       cardNumber: "1234 5678 9101 1123",

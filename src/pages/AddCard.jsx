@@ -31,7 +31,7 @@ const AddCard = () => {
   const [vendor, setVendor] = useState("evil");
   return (
     <>
-      <Top title={"add a new bank card"} />
+      <Top title={"add a new bank card"} subheading={"New Card"} />
       <Card
         newCard={true}
         cardNumber={cardNumber}

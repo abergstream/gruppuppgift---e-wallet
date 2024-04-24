@@ -5,7 +5,7 @@ import Card from "../components/Card";
 const EWallet = () => {
   return (
     <>
-      <Top title={"e-wallet"} />
+      <Top title={"e-wallet"} subheading={"Active Card"} />
       <Card />
     </>
   );

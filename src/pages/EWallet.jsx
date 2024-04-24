@@ -7,6 +7,7 @@ const EWallet = () => {
     <>
       <Top title={"e-wallet"} subheading={"Active Card"} />
       <Card />
+      Test, ta bort sen
     </>
   );
 };

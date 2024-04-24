@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 :root {
-  --card-yellow: #ffb749;
-  --card-black: #3a3a3a;
-  --card-purple: #7c4ede;
-  --card-red: #db2e4d;
-  --card-gray: #d5d5d5;
+  --card-bitcoin: #ffb749;
+  --card-ninja: #3a3a3a;
+  --card-chain: #7c4ede;
+  --card-evil: #db2e4d;
+  --card-new: #d5d5d5;
 }
 * {
   box-sizing: border-box;

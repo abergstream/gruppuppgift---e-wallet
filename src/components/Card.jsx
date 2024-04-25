@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
 
-const Card = ({
-  newCard,
-  cardNumber,
-  cardName,
-  validThru,
-  ccv,
-  vendor,
-  cards,
-}) => {
+const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
   return (
     <section className={`card card--${newCard ? "new" : vendor}`}>
       <div className="card__space-between">

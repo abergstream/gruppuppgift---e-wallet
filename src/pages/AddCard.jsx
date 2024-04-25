@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
 
-const AddCard = () => {
+const AddCard = ({ cards }) => {
   const [cardNumber, setCardNumber] = useState("1234567891011213");
   const [cardName, setCardName] = useState("Andreas Bergström");
   const [validThru, setValidThru] = useState("10 / 25");

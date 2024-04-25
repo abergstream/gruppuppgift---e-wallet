@@ -1,7 +1,27 @@
 import React from "react";
-
-const Cardstack = () => {
-  return <div></div>;
+import Card from "./Card";
+import "./CardStack.css";
+const CardStack = ({ allCards, setActiveCard }) => {
+  console.log(allCards);
+  return (
+    <>
+      <section className={"card-stack-container"}>
+        {allCards.map((card, index) => {
+          return (
+            <div
+              onClick={() => {
+                setActiveCard(card);
+              }}
+              className={"card-stack"}
+              style={{ top: `${index * 50}px` }}
+            >
+              <Card card={card} />
+            </div>
+          );
+        })}
+      </section>
+    </>
+  );
 };
 
-export default Cardstack;
+export default CardStack;

@@ -6,7 +6,7 @@ const Home = ({ cards }) => {
   return (
     <>
       <Top title={"e-wallet"} subheading={"Active Card"} />
-      <Card card={cards[0]} />
+      <Card cardNumber={"1234512515152"} />
     </>
   );
 };

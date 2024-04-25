@@ -35,7 +35,14 @@ const Wallet = ({ cards }) => {
                 backgroundColor: activeCardId === card.cardNumber ? "#ccc" : "",
               }}
             >
-              <Card newCard={false} card={card} />
+              <Card
+                newCard={false}
+                cardNumber={card.cardNumber}
+                cardName={card.cardName}
+                validThru={card.validThru}
+                ccv={card.ccv}
+                vendor={card.vendor}
+              />
             </li>
           ))
         ) : (

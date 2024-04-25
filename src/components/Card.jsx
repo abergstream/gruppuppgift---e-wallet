@@ -9,11 +9,12 @@ const Card = ({
   ccv,
   vendor,
   card,
+  cardStack,
 }) => {
   card ? console.log(card.vendor) : "";
   return (
     <section
-      className={`card card--${newCard ? "new" : card ? card.vendor : vendor}`}
+      className={`card card--${newCard ? "new" : card ? card.vendor : vendor} `}
     >
       <div className="card__space-between">
         <div className="card__blipp-container">

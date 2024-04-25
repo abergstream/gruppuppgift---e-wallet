@@ -26,23 +26,16 @@ const Wallet = ({ cards }) => {
       <h1>My Wallet</h1>
       <ul>
         {cards.length > 0 ? (
-          cards.map((card) => (
+          cards.map((card, index) => (
             <li
-              key={card.cardNumber}
+              key={index}
               onClick={() => handleCardClick(card.cardNumber)}
               style={{
                 cursor: "pointer",
                 backgroundColor: activeCardId === card.cardNumber ? "#ccc" : "",
               }}
             >
-              <Card
-                newCard={false}
-                cardNumber={card.cardNumber}
-                cardName={card.cardName}
-                validThru={card.validThru}
-                ccv={card.ccv}
-                vendor={card.vendor}
-              />
+              <Card newCard={false} card={card} />
             </li>
           ))
         ) : (

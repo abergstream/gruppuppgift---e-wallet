@@ -48,11 +48,19 @@ function App() {
   const [activeCard, setActiveCard] = useState(
     cards.length > 0 ? cards[cards.length - 1] : ""
   );
-  console.log(cards.length);
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home cards={cards} activeCard={activeCard} />} />
+        <Route
+          index
+          element={
+            <Home
+              cards={cards}
+              activeCard={activeCard}
+              setActiveCard={setActiveCard}
+            />
+          }
+        />
         <Route path={"/addcard"} element={<AddCard cards={cards} />} />
         <Route path={"/wallet"} element={<Wallet cards={cards} />} />
       </Routes>

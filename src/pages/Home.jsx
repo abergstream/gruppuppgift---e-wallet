@@ -2,7 +2,7 @@ import React from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
 
-const Home = ({ cards, activeCard }) => {
+const Home = ({ cards, activeCard, setActiveCard }) => {
   return (
     <>
       <Top title={"e-wallet"} subheading={"Active Card"} />

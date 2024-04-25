@@ -1,29 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 
-const Wallet = () => {
+const Wallet = ({ cards }) => {
   //   const [cards, setCards] = useState([]); ska ej vara med
   const [activeCardId, setActiveCardId] = useState(null); // State to track the active card
 
-  const storedCards = localStorage.getItem("cards");
-  const [cards, setCards] = useState([
-    {
-      cardID: 101,
-      cardNumber: "1234567891011123",
-      cardName: "RACHEL RICHTER",
-      validThru: "05/25",
-      ccv: "666",
-      vendor: "ninja",
-    },
-    {
-      cardID: 102,
-      cardNumber: "1234567891011123",
-      cardName: "Andreas Bergström",
-      validThru: "04/26",
-      ccv: "666",
-      vendor: "evil",
-    },
-  ]);
   console.log(cards);
   const handleCardClick = (cardId) => {
     setActiveCardId(cardId); // Set the clicked card as active

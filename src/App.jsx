@@ -5,6 +5,7 @@ import "./App.css";
 import AddCard from "./pages/AddCard";
 import Home from "./pages/Home";
 import Wallet from "./pages/Wallet";
+import { act } from "react-dom/test-utils";
 
 // För att det ska funka behöver ni köra
 // npm install react-router-dom
@@ -28,10 +29,13 @@ function App() {
       vendor: "evil",
     },
   ]);
+  const [activeCard, setActiveCard] = useState(
+    cards.length > 0 ? cards[0] : ""
+  );
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home cards={cards} />} />
+        <Route index element={<Home cards={cards} activeCard={activeCard} />} />
         <Route path={"/addcard"} element={<AddCard cards={cards} />} />
         <Route path={"/wallet"} element={<Wallet cards={cards} />} />
       </Routes>

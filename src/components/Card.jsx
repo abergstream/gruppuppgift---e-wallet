@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import "./Card.css";
 
-const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
-  log;
+const Card = ({
+  newCard,
+  cardNumber,
+  cardName,
+  validThru,
+  ccv,
+  vendor,
+  card,
+}) => {
+  card ? console.log(card.vendor) : "";
   return (
-    <section className={`card card--${newCard ? "new" : vendor}`}>
+    <section
+      className={`card card--${newCard ? "new" : card ? card.vendor : vendor}`}
+    >
       <div className="card__space-between">
         <div className="card__blipp-container">
           <img
@@ -15,7 +25,11 @@ const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
             alt=""
           />
         </div>
-        <img className="card__image" src={`gfx/${vendor}.png`} alt="" />
+        <img
+          className="card__image"
+          src={`gfx/${card ? card.vendor : vendor}.png`}
+          alt=""
+        />
       </div>
       <div>
         <img
@@ -25,15 +39,21 @@ const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
         />
       </div>
       <h3 className="card__card-number">
-        {cardNumber ? cardNumber.match(/.{1,4}/g).join(" ") : ""}
+        {card
+          ? card.cardNumber
+            ? card.cardNumber.match(/.{1,4}/g).join(" ")
+            : ""
+          : cardNumber
+          ? cardNumber.match(/.{1,4}/g).join(" ")
+          : ""}
       </h3>
       <div className="card__space-between">
         <p className="card__card-title">CARDHOLDER NAME</p>
         <p className="card__card-title">VALID THRU</p>
       </div>
       <div className="card__space-between">
-        <p className="card__card-info">{cardName}</p>
-        <p className="card__card-info">{validThru}</p>
+        <p className="card__card-info">{card ? card.cardName : cardName}</p>
+        <p className="card__card-info">{card ? card.validThru : validThru}</p>
       </div>
     </section>
   );

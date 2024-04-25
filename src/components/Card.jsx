@@ -4,7 +4,7 @@ import "./Card.css";
 const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
   const cardss = [
     {
-      cardNumber: "1234567891011123",
+      cardNumber: "8234567891011333",
       cardName: "RACHEL RICHTER",
       validThru: "05/25",
       ccv: "666",
@@ -30,24 +30,20 @@ const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
 
   console.log(cards);
   return cards ? (
-    <section className={`card card--${newCard ? "new" : cards[0].vendor}`}>
+    <section className={`card card--${newCard ? "new" : vendor}`}>
       <div className="card__space-between">
         <div className="card__blipp-container">
           <img
             className="card__image"
             src={`gfx/blipp_${
-              !newCard
-                ? cards[0].vendor === "bitcoin"
-                  ? "dark"
-                  : "light"
-                : "dark"
+              !newCard ? (vendor === "bitcoin" ? "dark" : "light") : "dark"
             }.png`}
             alt=""
           />
         </div>
         <img
           className="card__image"
-          src={`gfx/${newCard ? vendor : cards[0].vendor}.png`}
+          src={`gfx/${newCard ? vendor : vendor}.png`}
           alt=""
         />
       </div>
@@ -67,7 +63,7 @@ const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
           ? cardNumber
             ? cardNumber.match(/.{1,4}/g).join(" ")
             : ""
-          : cards[0].cardNumber.match(/.{1,4}/g).join(" ")}
+          : cardNumber.match(/.{1,4}/g).join(" ")}
       </h3>
       <div className="card__space-between">
         <p className="card__card-title">CARDHOLDER NAME</p>
@@ -76,13 +72,13 @@ const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
       <div className="card__space-between">
         <p className="card__card-info">
           {/* Om newCard === true, skriv ut propsen cardName
-          Om newCard !== true, skriv ut cards[0].cardName */}
-          {newCard ? cardName : cards[0].cardName}
+          Om newCard !== true, skriv ut cardName */}
+          {newCard ? cardName : cardName}
         </p>
         <p className="card__card-info">
           {/* Om newCard === true, skriv ut propsen validThru
-          Om newCard !== true, skriv ut cards[0].validThru */}
-          {newCard ? validThru : cards[0].validThru}
+          Om newCard !== true, skriv ut validThru */}
+          {newCard ? validThru : validThru}
         </p>
       </div>
     </section>

@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import "./Card.css";
 
 const Card = ({ newCard, cardNumber, cardName, validThru, ccv, vendor }) => {
-  // const cards = [
-  //   {
-  //     cardNumber: "1234567891011123",
-  //     cardName: "RACHEL RICHTER",
-  //     validThru: "05/25",
-  //     ccv: "666",
-  //     vendor: "ninja",
-  //   },
-  //   {
-  //     cardNumber: "1234567891011123",
-  //     cardName: "Andreas Bergström",
-  //     validThru: "04/26",
-  //     ccv: "666",
-  //     vendor: "evil",
-  //   },
-  // ];
-
+  const cardss = [
+    {
+      cardNumber: "1234567891011123",
+      cardName: "RACHEL RICHTER",
+      validThru: "05/25",
+      ccv: "666",
+      vendor: "ninja",
+    },
+    {
+      cardNumber: "1234567891011123",
+      cardName: "Andreas Bergström",
+      validThru: "04/26",
+      ccv: "666",
+      vendor: "evil",
+    },
+  ];
+  localStorage.setItem("cards", JSON.stringify(cardss));
   // Hämtar cards ifrån localstorage
   const storedCards = localStorage.getItem("cards");
 

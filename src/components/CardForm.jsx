@@ -15,9 +15,11 @@ const CardForm = ({
   setVendor,
   ccv,
   setCcv,
+  setActiveCard,
 }) => {
   const handleSubmit = () => {
-    if (cardNumber && cardName && validThru && ccv && vendor) {
+    if (cardNumber.length === 16 && cardName && validThru && ccv && vendor) {
+      console.log();
       const newCard = {
         cardID: cards.length + 1,
         cardNumber: cardNumber,
@@ -26,13 +28,16 @@ const CardForm = ({
         ccv: ccv,
         vendor: vendor,
       };
+      // Om det är första kortet man lägger till, sätt detta som activeCard
+      cards.length === 0 ? setActiveCard(newCard) : "";
 
+      // Lägger till kortet i cards-arrayen
       setCards([...cards, newCard]);
       setCardNumber("");
       setCardName("");
       setValidThru("");
       setCcv("");
-      localStorage.setItem("cards", JSON.stringify(cards));
+      localStorage.setItem("cards", JSON.stringify([...cards, newCard]));
       alert("Kort tillagt!");
       console.log(cards);
     } else alert("Please fill out the form!");

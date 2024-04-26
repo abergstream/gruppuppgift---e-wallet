@@ -3,7 +3,7 @@ import Top from "../components/Top";
 import Card from "../components/Card";
 import CardForm from "../components/CardForm";
 
-const AddCard = ({ cards, setCards }) => {
+const AddCard = ({ cards, setCards, setActiveCard }) => {
   const [cardNumber, setCardNumber] = useState("");
   const [cardName, setCardName] = useState("");
   const [validThru, setValidThru] = useState("");
@@ -33,6 +33,7 @@ const AddCard = ({ cards, setCards }) => {
         setVendor={setVendor}
         ccv={ccv}
         setCcv={setCcv}
+        setActiveCard={setActiveCard}
       />
     </>
   );

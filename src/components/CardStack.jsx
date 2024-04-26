@@ -9,6 +9,7 @@ const CardStack = ({ allCards, setActiveCard }) => {
         {allCards.map((card, index) => {
           return (
             <div
+              key={index}
               onClick={() => {
                 setActiveCard(card);
               }}

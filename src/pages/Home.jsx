@@ -4,6 +4,10 @@ import Card from "../components/Card";
 import CardStack from "../components/CardStack";
 
 const Home = ({ cards, activeCard, setActiveCard }) => {
+  // cardStack innehåller alla kort förutom det aktiva kortet
+  const cardStack = cards.filter((card) => {
+    return card != activeCard;
+  });
   return (
     <>
       <Top title={"e-wallet"} subheading={"Active Card"} />
@@ -27,8 +31,7 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
       {cards ? (
         <>
           <Card card={activeCard} />
-          <br />
-          <CardStack allCards={cards} setActiveCard={setActiveCard} />
+          <CardStack allCards={cardStack} setActiveCard={setActiveCard} />
         </>
       ) : (
         <h2 className="not-available">

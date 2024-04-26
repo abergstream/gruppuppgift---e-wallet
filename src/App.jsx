@@ -11,7 +11,6 @@ import { act } from "react-dom/test-utils";
 // npm install react-router-dom
 
 function App() {
-
   const fetchCards = JSON.parse(localStorage.getItem("cards"));
   const [cards, setCards] = useState(fetchCards ? fetchCards : "");
 
@@ -33,7 +32,13 @@ function App() {
         />
         <Route
           path={"/addcard"}
-          element={<AddCard cards={cards} setCards={setCards} />}
+          element={
+            <AddCard
+              cards={cards}
+              setCards={setCards}
+              setActiveCard={setActiveCard}
+            />
+          }
         />
         <Route path={"/wallet"} element={<Wallet cards={cards} />} />
       </Routes>

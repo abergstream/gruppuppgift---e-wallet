@@ -23,9 +23,18 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
      Exempelvis: <Card card={cards[0]} />
     */}
       <br />
-      <Card card={activeCard} />
-      <br />
-      <CardStack allCards={cards} setActiveCard={setActiveCard} />
+
+      {cards ? (
+        <>
+          <Card card={activeCard} />
+          <br />
+          <CardStack allCards={cards} setActiveCard={setActiveCard} />
+        </>
+      ) : (
+        <h2 className="not-available">
+          <em>No cards available</em>
+        </h2>
+      )}
     </>
   );
 };

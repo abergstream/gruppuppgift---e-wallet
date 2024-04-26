@@ -1,5 +1,6 @@
 import React from "react";
 import "./CardForm.css";
+import { Link } from "react-router-dom";
 
 const CardForm = ({
   cards,
@@ -15,8 +16,27 @@ const CardForm = ({
   ccv,
   setCcv,
 }) => {
-  console.log(cards);
+  const handleSubmit = () => {
+    if (cardNumber && cardName && validThru && ccv && vendor) {
+      const newCard = {
+        cardID: cards.length + 1,
+        cardNumber: cardNumber,
+        cardName: cardName.toUpperCase(),
+        validThru: validThru,
+        ccv: ccv,
+        vendor: vendor,
+      };
 
+      setCards([...cards, newCard]);
+      setCardNumber("");
+      setCardName("");
+      setValidThru("");
+      setCcv("");
+      localStorage.setItem("cards", JSON.stringify(cards));
+      alert("Kort tillagt!");
+      console.log(cards);
+    } else alert("Please fill out the form!");
+  };
   return (
     <section className="card-form">
       <label className="card-form-label" htmlFor="cardNumber">
@@ -83,7 +103,8 @@ const CardForm = ({
         <option value="evil">Evil</option>
         <option value="ninja">Ninja</option>
       </select>
-      <button>ADD CARD</button>
+      <button onClick={handleSubmit}>ADD CARD</button>
+      <Link to={"/"}> Hem </Link>
     </section>
   );
 };

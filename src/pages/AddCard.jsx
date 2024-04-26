@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
+import { Link } from "react-router-dom";
+
 
 const AddCard = ({ cards }) => {
   const [cardNumber, setCardNumber] = useState("1234567891011213");
@@ -17,6 +19,9 @@ const AddCard = ({ cards }) => {
         validThru={validThru}
         vendor={vendor}
       />
+      <section className="add-card-container">
+      <Link to="/" className="add-card-button">ADD CARD</Link>
+      </section>
     </>
   );
 };

@@ -11,8 +11,10 @@ import { act } from "react-dom/test-utils";
 // npm install react-router-dom
 
 function App() {
+
   const fetchCards = JSON.parse(localStorage.getItem("cards"));
   const [cards, setCards] = useState(fetchCards ? fetchCards : "");
+
   const [activeCard, setActiveCard] = useState(
     cards.length > 0 ? cards[cards.length - 1] : ""
   );

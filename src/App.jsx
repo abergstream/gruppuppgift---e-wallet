@@ -13,7 +13,7 @@ import { act } from "react-dom/test-utils";
 function App() {
   const [cards, setCards] = useState([
     {
-      cardID: 101,
+      cardID: 1,
       cardNumber: "1234567891011123",
       cardName: "RACHEL RICHTER",
       validThru: "05/25",
@@ -21,7 +21,7 @@ function App() {
       vendor: "chain",
     },
     {
-      cardID: 102,
+      cardID: 2,
       cardNumber: "9876543210987654",
       cardName: "JOHN DOE",
       validThru: "10/26",
@@ -29,7 +29,7 @@ function App() {
       vendor: "bitcoin",
     },
     {
-      cardID: 103,
+      cardID: 3,
       cardNumber: "5555666677778888",
       cardName: "EMMA SMITH",
       validThru: "03/24",
@@ -37,7 +37,7 @@ function App() {
       vendor: "evil",
     },
     {
-      cardID: 104,
+      cardID: 4,
       cardNumber: "4444333322221111",
       cardName: "MICHAEL JOHNSON",
       validThru: "08/27",

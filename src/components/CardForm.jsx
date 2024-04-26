@@ -1,4 +1,5 @@
 import React from "react";
+import "./CardForm.css";
 
 const CardForm = ({
   cards,
@@ -18,8 +19,11 @@ const CardForm = ({
 
   return (
     <section className="card-form">
-      <label htmlFor="cardNumber">CARD NUMBER</label>
+      <label className="card-form-label" htmlFor="cardNumber">
+        CARD NUMBER
+      </label>
       <input
+        className="card-form-input"
         id="cardNumber"
         type="number"
         value={cardNumber}
@@ -27,8 +31,11 @@ const CardForm = ({
           setCardNumber(e.target.value);
         }}
       />
-      <label htmlFor="cardName">CARDHOLDER NAME</label>
+      <label className="card-form-label" htmlFor="cardName">
+        CARDHOLDER NAME
+      </label>
       <input
+        className="card-form-input"
         id="cardName"
         type="text"
         value={cardName}
@@ -36,8 +43,11 @@ const CardForm = ({
           setCardName(e.target.value);
         }}
       />
-      <label htmlFor="validThru">VALID THRU</label>
+      <label className="card-form-label" htmlFor="validThru">
+        VALID THRU
+      </label>
       <input
+        className="card-form-input"
         id="validThru"
         type="text"
         value={validThru}
@@ -45,8 +55,11 @@ const CardForm = ({
           setValidThru(e.target.value);
         }}
       />
-      <label htmlFor="ccv">CCV</label>
+      <label className="card-form-label" htmlFor="ccv">
+        CCV
+      </label>
       <input
+        className="card-form-input"
         id="ccv"
         type="number"
         value={ccv}
@@ -54,8 +67,11 @@ const CardForm = ({
           setCcv(e.target.value);
         }}
       />
-      <label htmlFor="vendor">VENDOR</label>
+      <label className="card-form-label" htmlFor="vendor">
+        VENDOR
+      </label>
       <select
+        className="card-form-select"
         name="vendor"
         id="vendor"
         onChange={(e) => {

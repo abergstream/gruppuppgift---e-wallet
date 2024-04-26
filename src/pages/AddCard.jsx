@@ -4,9 +4,9 @@ import Card from "../components/Card";
 import CardForm from "../components/CardForm";
 
 const AddCard = ({ cards, setCards }) => {
-  const [cardNumber, setCardNumber] = useState("1234567891011213");
-  const [cardName, setCardName] = useState("Andreas Bergström");
-  const [validThru, setValidThru] = useState("10 / 25");
+  const [cardNumber, setCardNumber] = useState("");
+  const [cardName, setCardName] = useState("");
+  const [validThru, setValidThru] = useState("");
   const [vendor, setVendor] = useState("bitcoin");
   const [ccv, setCcv] = useState("");
 

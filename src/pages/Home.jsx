@@ -2,7 +2,7 @@ import React from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
 import CardStack from "../components/CardStack";
-import { Link } from "react-router-dom";
+import Button from "../components/AddCardButton";
 
 
 const Home = ({ cards, activeCard, setActiveCard }) => {
@@ -29,9 +29,7 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
       <br />
       <CardStack allCards={cards} setActiveCard={setActiveCard} />
       <br />
-      <section className="add-card-container">
-      <Link to="/addcard" className="add-card-button">ADD A NEW CARD</Link>
-    </section>
+      <Button />
     </>
   );
 };

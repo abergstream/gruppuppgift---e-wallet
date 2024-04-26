@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
-import { Link } from "react-router-dom";
+import HomeButton from "../components/HomeButton";
+
 
 
 const AddCard = ({ cards }) => {
@@ -19,9 +20,7 @@ const AddCard = ({ cards }) => {
         validThru={validThru}
         vendor={vendor}
       />
-      <section className="add-card-container">
-      <Link to="/" className="add-card-button">ADD CARD</Link>
-      </section>
+      <HomeButton />
     </>
   );
 };

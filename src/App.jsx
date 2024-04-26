@@ -61,7 +61,10 @@ function App() {
             />
           }
         />
-        <Route path={"/addcard"} element={<AddCard cards={cards} />} />
+        <Route
+          path={"/addcard"}
+          element={<AddCard cards={cards} setCards={setCards} />}
+        />
         <Route path={"/wallet"} element={<Wallet cards={cards} />} />
       </Routes>
     </BrowserRouter>

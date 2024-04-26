@@ -11,7 +11,6 @@ const Card = ({
   card,
   cardStack,
 }) => {
-  card ? console.log(card.vendor) : "";
   return (
     <section
       className={`card card--${newCard ? "new" : card ? card.vendor : vendor} `}

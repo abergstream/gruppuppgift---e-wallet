@@ -27,12 +27,6 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
      I Home och CardStack skickar vi in hela kortinfon för enklare hantering
      Exempelvis: <Card card={cards[0]} />
     */}
-      <br />
-      <Card card={activeCard} />
-      <br />
-      <CardStack allCards={cards} setActiveCard={setActiveCard} />
-      <br />
-
       {cards ? (
         <>
           <Card card={activeCard} />

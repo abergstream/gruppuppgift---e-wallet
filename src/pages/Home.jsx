@@ -6,6 +6,10 @@ import Button from "../components/AddCardButton";
 
 
 const Home = ({ cards, activeCard, setActiveCard }) => {
+  // cardStack innehåller alla kort förutom det aktiva kortet
+  const cardStack = cards.filter((card) => {
+    return card != activeCard;
+  });
   return (
     <>
       <Top title={"e-wallet"} subheading={"Active Card"} />
@@ -29,7 +33,19 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
       <br />
       <CardStack allCards={cards} setActiveCard={setActiveCard} />
       <br />
+
+      {cards ? (
+        <>
+          <Card card={activeCard} />
+          <CardStack allCards={cardStack} setActiveCard={setActiveCard} />
+        </>
+      ) : (
+        <h2 className="not-available">
+          <em>No cards available</em>
+        </h2>
+      )}
       <Button />
+
     </>
   );
 };

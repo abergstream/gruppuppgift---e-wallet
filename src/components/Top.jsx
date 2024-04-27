@@ -1,10 +1,10 @@
 import React from "react";
 import "./Top.css";
-const Top = ({ title, subheading }) => {
+const Top = ({ title, subheading, cards }) => {
   return (
     <>
       <h1 className="heading">{title.toUpperCase()}</h1>
-      <h2 className="subheading">{subheading.toUpperCase()}</h2>
+      {cards ? <h2 className="subheading">{subheading.toUpperCase()} </h2> : ""}
     </>
   );
 };

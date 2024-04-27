@@ -5,7 +5,8 @@ import CardStack from "../components/CardStack";
 import AddCardButton from "../components/AddCardButton";
 
 const Home = ({ cards, activeCard, setActiveCard }) => {
-  // cardStack innehåller alla kort förutom det aktiva kortet
+  // Om det finns kort inlagda innehåller cardStack alla kort förutom det aktiva kortet
+
   const cardStack = cards
     ? cards.filter((card) => {
         return card != activeCard;
@@ -13,7 +14,7 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
     : "";
   return (
     <section className="wrapper">
-      <Top title={"e-wallet"} subheading={"Active Card"} />
+      <Top title={"e-wallet"} subheading={"Active Card"} cards={cards} />
       {cards ? (
         <>
           <Card card={activeCard} />
@@ -21,7 +22,10 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
         </>
       ) : (
         <h2 className="not-available">
-          <em>No cards available</em>
+          <p>No cards available</p>
+          <p className="not-available__text--small">
+            <em>Use the button below to add cards</em>
+          </p>
         </h2>
       )}
       <AddCardButton />

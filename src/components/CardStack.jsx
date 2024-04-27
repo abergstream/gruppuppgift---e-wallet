@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 import "./CardStack.css";
 const CardStack = ({ allCards, setActiveCard }) => {
-  console.log(allCards);
   return (
     <>
       <section
@@ -13,8 +12,13 @@ const CardStack = ({ allCards, setActiveCard }) => {
           return (
             <div
               key={index}
-              onClick={() => {
-                setActiveCard(card);
+              onClick={(e) => {
+                const testDiv = e.currentTarget;
+                testDiv.classList.add("test");
+                setTimeout(() => {
+                  setActiveCard(card);
+                  testDiv.classList.remove("test");
+                }, 200);
               }}
               className={"card-stack"}
               style={{ top: `${index * 50}px` }}

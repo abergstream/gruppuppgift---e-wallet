@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   margin-top: 20px;
   font-family: "PT Mono";
   font-size: 12px;
@@ -11,10 +11,11 @@
 .card-form-input {
   border-radius: 5px;
   width: min(370px, 100%);
-  height: 45px;
+
   border: 1px solid black;
   font-family: "PT Mono";
   font-size: 18px;
+  padding: 20px 15px;
 }
 .card-form-label {
   text-align: left;
@@ -23,8 +24,20 @@
 .card-form-select {
   width: min(370px, 100%);
   border-radius: 5px;
-  height: 45px;
+  padding: 20px 15px;
   border: 1px solid black;
   font-family: "PT Mono";
   font-size: 18px;
+}
+.card-form__space-between {
+  width: min(370px, 100%);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.card-form__card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }

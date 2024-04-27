@@ -14,6 +14,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   color: #fff;
   margin: 0 auto 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .card--bitcoin {
@@ -31,6 +34,7 @@
 }
 .card--new {
   background-color: var(--card-new);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .card__space-between {
   display: flex;

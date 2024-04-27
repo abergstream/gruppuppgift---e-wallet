@@ -9,3 +9,23 @@
   width: 100%;
   cursor: pointer;
 }
+.test {
+  background-color: red;
+  opacity: 0.3;
+  animation: testAnim 250ms 1;
+}
+@keyframes testAnim {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0);
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100%);
+
+    filter: blur(1px);
+  }
+}

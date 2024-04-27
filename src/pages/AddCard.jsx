@@ -15,7 +15,7 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
 
   return (
     <section className="wrapper">
-      <Top title={"add a new bank card"} subheading={"New Card"} />
+      <Top title={"add a new bank card"} subheading={"New Card"} cards={true} />
       <Card
         newCard={true}
         cardNumber={cardNumber}

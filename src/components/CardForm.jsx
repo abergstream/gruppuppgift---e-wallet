@@ -52,6 +52,7 @@ const CardForm = ({
         id="cardNumber"
         type="number"
         value={cardNumber}
+        placeholder="1234 5678 9101 1121"
         onChange={(e) => {
           setCardNumber(e.target.value);
         }}
@@ -64,34 +65,43 @@ const CardForm = ({
         id="cardName"
         type="text"
         value={cardName}
+        placeholder="FIRSTNAME, LASTNAME"
         onChange={(e) => {
           setCardName(e.target.value);
         }}
       />
-      <label className="card-form-label" htmlFor="validThru">
-        VALID THRU
-      </label>
-      <input
-        className="card-form-input"
-        id="validThru"
-        type="text"
-        value={validThru}
-        onChange={(e) => {
-          setValidThru(e.target.value);
-        }}
-      />
-      <label className="card-form-label" htmlFor="ccv">
-        CCV
-      </label>
-      <input
-        className="card-form-input"
-        id="ccv"
-        type="number"
-        value={ccv}
-        onChange={(e) => {
-          setCcv(e.target.value);
-        }}
-      />
+      <div className="card-form__space-between">
+        <aside className="card-form__card-info">
+          <label className="card-form-label" htmlFor="validThru">
+            VALID THRU
+          </label>
+          <input
+            className="card-form-input"
+            id="validThru"
+            type="text"
+            value={validThru}
+            placeholder="09 / 25"
+            onChange={(e) => {
+              setValidThru(e.target.value);
+            }}
+          />
+        </aside>
+        <aside className="card-form__card-info">
+          <label className="card-form-label" htmlFor="ccv">
+            CCV
+          </label>
+          <input
+            className="card-form-input"
+            id="ccv"
+            type="number"
+            value={ccv}
+            placeholder="032"
+            onChange={(e) => {
+              setCcv(e.target.value);
+            }}
+          />
+        </aside>
+      </div>
       <label className="card-form-label" htmlFor="vendor">
         VENDOR
       </label>

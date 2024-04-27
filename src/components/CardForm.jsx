@@ -16,9 +16,38 @@ const CardForm = ({
   ccv,
   setCcv,
   setActiveCard,
+  setErrorMsg,
+  setSuccessMsg,
 }) => {
+  const showError = (cardInfo) => {
+    let errorMessage = [];
+    cardInfo.cardNumber.length !== 16
+      ? errorMessage.push("Card number needs to be 16 characters")
+      : "";
+    !cardInfo.cardName ? errorMessage.push("Missing cardholder name") : "";
+    cardInfo.validThru.length !== 7
+      ? errorMessage.push('Missing Valid thru, e.g "09 / 25"')
+      : "";
+    cardInfo.ccv.length != 3
+      ? errorMessage.push("CCV needs to be 3 characters long")
+      : "";
+    !cardInfo.vendor
+      ? errorMessage.push(
+          "Somehow to succeeded to delete the vendor value, reload the page and try again"
+        )
+      : "";
+    setErrorMsg(errorMessage);
+    console.log(errorMessage);
+  };
+
   const handleSubmit = () => {
-    if (cardNumber.length === 16 && cardName && validThru && ccv && vendor) {
+    if (
+      cardNumber.length === 16 &&
+      cardName &&
+      validThru.length === 7 &&
+      ccv.length === 3 &&
+      vendor
+    ) {
       console.log();
       const newCard = {
         cardID: cards.length + 1,
@@ -37,10 +66,22 @@ const CardForm = ({
       setCardName("");
       setValidThru("");
       setCcv("");
+      // Lägger till korten i localStorage
       localStorage.setItem("cards", JSON.stringify([...cards, newCard]));
-      alert("Kort tillagt!");
-      console.log(cards);
-    } else alert("Please fill out the form!");
+      // Sätter successMsg (som visar en modal)
+      setSuccessMsg(["Go to Home to view your cards"]);
+    } else {
+      const cardInfo = {
+        cardID: cards.length + 1,
+        cardNumber: cardNumber,
+        cardName: cardName,
+        validThru: validThru,
+        ccv: ccv,
+        vendor: vendor,
+      };
+
+      showError(cardInfo);
+    }
   };
   return (
     <section className="card-form">

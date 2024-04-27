@@ -44,7 +44,10 @@ const Card = ({
             ? card.cardNumber.match(/.{1,4}/g).join(" ")
             : ""
           : cardNumber
-          ? cardNumber.match(/.{1,4}/g).join(" ")
+          ? cardNumber
+              .match(/.{1,4}/g)
+              .join(" ")
+              .slice(0, 19)
           : ""}
       </h3>
       <div className="card__space-between">

@@ -9,23 +9,17 @@
   width: 100%;
   cursor: pointer;
 }
-.test {
+.card-swipe {
   background-color: red;
-  opacity: 0.3;
-  animation: testAnim 250ms 1;
-}
-@keyframes testAnim {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-    filter: blur(0);
-  }
-  30% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-100%);
 
-    filter: blur(1px);
+  animation: swipeCard 250ms 1;
+}
+@keyframes swipeCard {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-120%);
   }
 }

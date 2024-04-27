@@ -6,7 +6,7 @@ const CardStack = ({ allCards, setActiveCard }) => {
     <>
       <section
         className={"card-stack-container"}
-        style={{ height: `${235 + (allCards.length - 1) * 50}px` }}
+        style={{ height: `${255 + (allCards.length - 1) * 50}px` }}
       >
         {allCards.map((card, index) => {
           return (
@@ -14,10 +14,10 @@ const CardStack = ({ allCards, setActiveCard }) => {
               key={index}
               onClick={(e) => {
                 const testDiv = e.currentTarget;
-                testDiv.classList.add("test");
+                testDiv.classList.add("card-swipe");
                 setTimeout(() => {
                   setActiveCard(card);
-                  testDiv.classList.remove("test");
+                  testDiv.classList.remove("card-swipe");
                 }, 200);
               }}
               className={"card-stack"}

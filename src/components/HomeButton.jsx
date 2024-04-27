@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 const HomeButton = () => {
   return (
-  <>
-    <section className="add-card-container">
-      <Link to="/" className="add-card-button">ADD CARD</Link>
-    </section>
-  </>
-  )
+    <>
+      <section className="add-card-container">
+        <Link to="/" className="add-card-button add-card-button--black">
+          HOME
+        </Link>
+      </section>
+    </>
+  );
 };
 
 export default HomeButton;

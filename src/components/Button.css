@@ -1,14 +1,4 @@
-.add-card-container {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .add-card-button {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +11,13 @@
   font-size: 22px;
   text-decoration: none;
   color: black;
+  margin: 10px 0;
 }
-  
-.add-card-button:hover {
-  background-color: black;
-  color: white;
+.add-card-button--black {
+  color: #fff;
+  background-color: #000;
+}
+
+.add-card-button--add-card {
+  background-color: #fff;
 }

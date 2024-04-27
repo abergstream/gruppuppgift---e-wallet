@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardForm.css";
 import { Link } from "react-router-dom";
-
+import "./Button.css";
 const CardForm = ({
   cards,
   setCards,
@@ -108,8 +108,12 @@ const CardForm = ({
         <option value="evil">Evil</option>
         <option value="ninja">Ninja</option>
       </select>
-      <button onClick={handleSubmit}>ADD CARD</button>
-      <Link to={"/"}> Hem </Link>
+      <button
+        className="add-card-button add-card-button--add-card"
+        onClick={handleSubmit}
+      >
+        ADD CARD
+      </button>
     </section>
   );
 };

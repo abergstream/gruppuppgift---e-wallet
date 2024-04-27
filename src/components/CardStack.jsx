@@ -5,7 +5,10 @@ const CardStack = ({ allCards, setActiveCard }) => {
   console.log(allCards);
   return (
     <>
-      <section className={"card-stack-container"}>
+      <section
+        className={"card-stack-container"}
+        style={{ height: `${235 + (allCards.length - 1) * 50}px` }}
+      >
         {allCards.map((card, index) => {
           return (
             <div

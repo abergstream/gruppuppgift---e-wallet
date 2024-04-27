@@ -4,7 +4,6 @@ import Card from "../components/Card";
 
 import HomeButton from "../components/HomeButton";
 
-
 import CardForm from "../components/CardForm";
 
 const AddCard = ({ cards, setCards, setActiveCard }) => {
@@ -15,7 +14,7 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
   const [ccv, setCcv] = useState("");
 
   return (
-    <>
+    <section className="wrapper">
       <Top title={"add a new bank card"} subheading={"New Card"} />
       <Card
         newCard={true}
@@ -25,7 +24,6 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
         vendor={vendor}
       />
 
-      <HomeButton />
       <CardForm
         cards={cards}
         setCards={setCards}
@@ -41,8 +39,8 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
         setCcv={setCcv}
         setActiveCard={setActiveCard}
       />
-
-    </>
+      <HomeButton />
+    </section>
   );
 };
 

@@ -6,6 +6,7 @@
   --card-evil: #db2e4d;
   --card-new: #d5d5d5;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +19,9 @@
   font-family: "PT Mono";
   font-weight: 700;
   font-size: 22px;
+
+}
+
 }
 
 .not-available {

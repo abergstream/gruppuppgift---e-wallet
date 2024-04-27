@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
+
+import HomeButton from "../components/HomeButton";
+
+
 import CardForm from "../components/CardForm";
 
 const AddCard = ({ cards, setCards, setActiveCard }) => {
@@ -20,6 +24,8 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
         validThru={validThru}
         vendor={vendor}
       />
+
+      <HomeButton />
       <CardForm
         cards={cards}
         setCards={setCards}
@@ -35,6 +41,7 @@ const AddCard = ({ cards, setCards, setActiveCard }) => {
         setCcv={setCcv}
         setActiveCard={setActiveCard}
       />
+
     </>
   );
 };

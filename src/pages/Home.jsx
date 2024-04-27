@@ -2,6 +2,8 @@ import React from "react";
 import Top from "../components/Top";
 import Card from "../components/Card";
 import CardStack from "../components/CardStack";
+import Button from "../components/AddCardButton";
+
 
 const Home = ({ cards, activeCard, setActiveCard }) => {
   // cardStack innehåller alla kort förutom det aktiva kortet
@@ -27,6 +29,10 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
      Exempelvis: <Card card={cards[0]} />
     */}
       <br />
+      <Card card={activeCard} />
+      <br />
+      <CardStack allCards={cards} setActiveCard={setActiveCard} />
+      <br />
 
       {cards ? (
         <>
@@ -38,6 +44,8 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
           <em>No cards available</em>
         </h2>
       )}
+      <Button />
+
     </>
   );
 };

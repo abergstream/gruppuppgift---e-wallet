@@ -17,7 +17,11 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
       <Top title={"e-wallet"} subheading={"Active Card"} cards={cards} />
       {cards ? (
         <>
-          <Card card={activeCard} />
+          <section className="active-card__container">
+            <Card card={activeCard} />
+            <button className="active-card__button-delete">Delete Card</button>
+          </section>
+          <hr className="active-card__spacer" />
           <CardStack allCards={cardStack} setActiveCard={setActiveCard} />
         </>
       ) : (

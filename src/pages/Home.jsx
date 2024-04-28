@@ -4,9 +4,16 @@ import Card from "../components/Card";
 import CardStack from "../components/CardStack";
 import AddCardButton from "../components/AddCardButton";
 
-const Home = ({ cards, activeCard, setActiveCard }) => {
+const Home = ({ cards, setCards, activeCard, setActiveCard }) => {
+  const deleteCard = (card) => {
+    const newCards = cards.filter((newCard) => {
+      return newCard.cardID != card.cardID;
+    });
+    localStorage.setItem("cards", JSON.stringify(newCards));
+    setCards(newCards);
+    setActiveCard(cards[0]);
+  };
   // Om det finns kort inlagda innehåller cardStack alla kort förutom det aktiva kortet
-
   const cardStack = cards
     ? cards.filter((card) => {
         return card != activeCard;
@@ -19,7 +26,14 @@ const Home = ({ cards, activeCard, setActiveCard }) => {
         <>
           <section className="active-card__container">
             <Card card={activeCard} />
-            <button className="active-card__button-delete">Delete Card</button>
+            <button
+              className="active-card__button-delete"
+              onClick={() => {
+                deleteCard(activeCard);
+              }}
+            >
+              Delete Card
+            </button>
           </section>
           <hr className="active-card__spacer" />
           <CardStack allCards={cardStack} setActiveCard={setActiveCard} />

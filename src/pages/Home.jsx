@@ -29,7 +29,9 @@ const Home = ({ cards, setCards, activeCard, setActiveCard }) => {
             <button
               className="active-card__button-delete"
               onClick={() => {
-                deleteCard(activeCard);
+                if (confirm("Do you want to delete this card?")) {
+                  deleteCard(activeCard);
+                }
               }}
             >
               Delete Card

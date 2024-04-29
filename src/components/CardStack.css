@@ -23,3 +23,14 @@
     transform: translateX(-120%);
   }
 }
+@media screen and (min-width: 400px) {
+  @keyframes swipeCard {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+}

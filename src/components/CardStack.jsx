@@ -14,7 +14,7 @@ const CardStack = ({ allCards, setActiveCard }) => {
               key={index}
               onClick={(e) => {
                 const cardContainer = e.currentTarget;
-                testDiv.classList.add("card-swipe");
+                cardContainer.classList.add("card-swipe");
                 setTimeout(() => {
                   setActiveCard(card);
                   cardContainer.classList.remove("card-swipe");

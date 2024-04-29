@@ -26,7 +26,7 @@ const CardForm = ({
       : "";
     !cardInfo.cardName ? errorMessage.push("Missing cardholder name") : "";
     cardInfo.validThru.length !== 7
-      ? errorMessage.push('Missing Valid thru, e.g "09 / 25"')
+      ? errorMessage.push('Missing Valid thru, e.g "09 / 25" (Not 09/25)')
       : "";
     cardInfo.ccv.length != 3
       ? errorMessage.push("CCV needs to be 3 characters long")

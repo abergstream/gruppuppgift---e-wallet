@@ -13,11 +13,11 @@ const CardStack = ({ allCards, setActiveCard }) => {
             <div
               key={index}
               onClick={(e) => {
-                const testDiv = e.currentTarget;
+                const cardContainer = e.currentTarget;
                 testDiv.classList.add("card-swipe");
                 setTimeout(() => {
                   setActiveCard(card);
-                  testDiv.classList.remove("card-swipe");
+                  cardContainer.classList.remove("card-swipe");
                 }, 200);
               }}
               className={"card-stack"}

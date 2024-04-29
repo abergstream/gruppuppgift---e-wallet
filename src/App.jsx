@@ -24,6 +24,7 @@ function App() {
           element={
             <Home
               cards={cards}
+              setCards={setCards}
               activeCard={activeCard}
               setActiveCard={setActiveCard}
             />

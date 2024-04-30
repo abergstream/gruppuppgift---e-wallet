@@ -37,7 +37,6 @@ const CardForm = ({
         )
       : "";
     setErrorMsg(errorMessage);
-    console.log(errorMessage);
   };
 
   const handleSubmit = () => {
